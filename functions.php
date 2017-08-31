@@ -61,3 +61,45 @@ function learningWordPress_setup() {
 
 add_action('after_setup_theme', 'learningWordPress_setup');
 
+// Add Widget Locations
+function ourWidgetsInit() {
+
+  register_sidebar( array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar1', 
+    'before_widget' => '<div class="widget-item">',
+    'after_widget' => '</div>'
+  ));
+
+  register_sidebar( array(
+    'name' => 'Footer Area 1',
+    'id' => 'footer1', 
+    'before_widget' => '<div class="widget-item">',
+    'after_widget' => '</div>'
+  ));
+
+  register_sidebar( array(
+    'name' => 'Footer Area 2',
+    'id' => 'footer2', 
+    'before_widget' => '<div class="widget-item">',
+    'after_widget' => '</div>'
+  ));
+
+  register_sidebar( array(
+    'name' => 'Footer Area 3',
+    'id' => 'footer3', 
+    'before_widget' => '<div class="widget-item">',
+    'after_widget' => '</div>'
+  ));
+
+  register_sidebar( array(
+    'name' => 'Footer Area 4',
+    'id' => 'footer4',
+    'before_widget' => '<div class="widget-item">',
+    'after_widget' => '</div>'
+  ));
+}
+
+add_action('widgets_init', 'ourWidgetsInit');
+
+

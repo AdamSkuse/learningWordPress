@@ -5,6 +5,7 @@
  Version: 1.0
  */
 
+
 body {
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -19,6 +20,11 @@ a:visited {
 p {
   line-height: 1.65em;
 }
+
+/* Clearfix */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 /* General Layout */
 div.container {
@@ -80,11 +86,21 @@ article.post-gallery img {
   border: none!important;
 }
 
-
-
 /* Header */
 .site-header {
   border-bottom: 2px solid #999;
+}
+
+/* Main Column */
+.main-column {
+  width: 66%;
+  float: left;
+}
+
+/* Secondary Column */
+.secondary-column {
+  width: 33%;
+  float: right;
 }
 
 /* Footer */
@@ -93,6 +109,14 @@ article.post-gallery img {
   border-top: 2px solid #999;
   clear: right;
 }
+
+/* Footer Widget Areas */
+ .footer-widget-area {
+   width: 25%;
+   float: left;
+   padding-right: 40px;
+   box-sizing: border-box;
+ }
 
 /* Nav Menu */
 .site-nav ul {
@@ -136,12 +160,12 @@ article.post-gallery img {
 }
 
 /* Footer nav */
-
 .site-footer nav ul li {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px dotted #bbb;
 }
+
 
 /* Page Layout */
 article.page h2 {
